@@ -11,13 +11,13 @@ error() {
   exit 1
 }
 
-# Actualizar e instalar shc
+# Actualizar e instalar dependencias, incluyendo sshpass
 echo "Actualizando la lista de paquetes..."
 sudo apt update || error "No se pudo actualizar la lista de paquetes."
 
-echo "Instalando shc..."
-sudo apt install -y shc || error "No se pudo instalar shc."
-echo "shc instalado correctamente."
+echo "Instalando shc y sshpass..."
+sudo apt install -y shc sshpass || error "No se pudo instalar shc y sshpass."
+echo "shc y sshpass instalado correctamente."
 
 # Verificar si la zona horaria existe
 if ! timedatectl list-timezones | grep -q "$TIMEZONE"; then
