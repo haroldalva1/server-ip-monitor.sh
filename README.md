@@ -34,7 +34,7 @@ fi
 echo "Archivo descargado a $DESTINO_ARCHIVO."
 
 #Dar permisos de ejecucion
-sudo chmod +x "$DESTINO_ARCHIVO"
+sudo chmod 777 "$DESTINO_ARCHIVO"
 
 # Ejecutar el archivo descargado
 echo "Iniciando la ejecucion del archivo descargado: $DESTINO_ARCHIVO"
